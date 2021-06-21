@@ -5,7 +5,7 @@ with open('Dvir-nondysgenic-all.fasta') as bigfile:
         if lineno % lines_per_file == 0:
             if smallfile:
                 smallfile.close()
-            small_filename = 'dys_{}.fa'.format(lineno + lines_per_file)
+            small_filename = 'nondys_{}.fa'.format(lineno + lines_per_file)
             smallfile = open(small_filename, "w")
         smallfile.write(line)
     if smallfile:
