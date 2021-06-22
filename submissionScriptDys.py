@@ -1,6 +1,7 @@
 interval = 60000
 lineno=0
 smallfile = None
+
 while (lineno<=6726270):
     lineno = lineno + interval
     if smallfile:
