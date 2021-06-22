@@ -1,19 +1,19 @@
 interval = 60000
 lineno=0
 smallfile = None
-while (lineno<=6726270):
+while (lineno<=5670924):
     lineno = lineno + interval
     if smallfile:
         smallfile.close()
-    small_filename = 'dys_{}.sh'.format(lineno)
+    small_filename = 'nondys_{}.sh'.format(lineno)
     smallfile = open(small_filename, "w")
     smallfile.write("#!/bin/bash\n")
-    smallfile.write("#SBATCH --job-name=repmask_dys"+str(lineno)+"\n")
+    smallfile.write("#SBATCH --job-name=repmask_nondys"+str(lineno)+"\n")
     smallfile.write("#SBATCH --partition=sixhour\n")
     smallfile.write("#SBATCH --mail-type=ALL\n")
     smallfile.write("#SBATCH --mail-user=e378m007@ku.edu\n")
     smallfile.write("#SBATCH --time=0-06:00:00\n")
-    smallfile.write("#SBATCH --output=repmask_dys"+str(lineno)+"%j.log\n")
+    smallfile.write("#SBATCH --output=repmask_nondys"+str(lineno)+"%j.log\n")
     smallfile.write("#SBATCH --ntasks=1\n")
     smallfile.write("#SBATCH --cpus-per-task=16\n")
     smallfile.write("#SBATCH --mem=16gb\n")
