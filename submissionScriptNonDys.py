@@ -1,7 +1,7 @@
 interval = 60000
-lineno=120000
+lineno=1200000
 smallfile = None
-while (lineno<=1140000):
+while (lineno<=1740000):
     lineno = lineno + interval
     if smallfile:
         smallfile.close()
