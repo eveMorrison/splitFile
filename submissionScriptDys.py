@@ -2,7 +2,7 @@ interval = 60000
 lineno=0
 smallfile = None
 
-while (lineno<=6726270):
+while (lineno<=0):
     lineno = lineno + interval
     if smallfile:
         smallfile.close()
@@ -23,5 +23,5 @@ while (lineno<=6726270):
     smallfile.write("\n")
     smallfile.write("echo \"running repeat masker\"\n")
     smallfile.write("\n")
-    smallfile.write("RepeatMasker /home/e378m007/dysgenic/dys_" + str(lineno) + ".fa -engine ncbi -lib /home/e378m007/dysgenic/polyphemus.fa\n")
+    smallfile.write("RepeatMasker /home/e378m007/dysgenic/dys" + str(lineno) + ".fa -engine ncbi -lib /home/e378m007/bestTEs.fa -no_is\n")
     
