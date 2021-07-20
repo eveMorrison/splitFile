@@ -1,8 +1,9 @@
 interval = 60000
-lineno=1200000
+lineno=420000
 smallfile = None
 while (lineno<=1740000):
     lineno = lineno + interval
+    print("sbatch nondys_"+str(lineno)+".sh")
     if smallfile:
         smallfile.close()
     small_filename = 'nondys_{}.sh'.format(lineno)
@@ -22,4 +23,4 @@ while (lineno<=1740000):
     smallfile.write("\n")
     smallfile.write("echo \"running repeat masker\"\n")
     smallfile.write("\n")
-    smallfile.write("RepeatMasker /home/e378m007/nondysgenic/nondys_" + str(lineno) + ".fa -engine ncbi -lib /home/e378m007/nondysgenic/Erwin2015Library.fa -no_is\n")
+    smallfile.write("RepeatMasker /home/e378m007/nondysgenic/nondys_" + str(lineno) + ".fa -engine ncbi -lib /home/e378m007/nondysgenic/bestTEs.fa -no_is\n")
