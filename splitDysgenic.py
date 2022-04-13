@@ -1,4 +1,4 @@
-lines_per_file = 60000
+lines_per_file = 50000
 smallfile = None
 with open('Dvir-dysgenic-all.fasta') as bigfile:
     for lineno, line in enumerate(bigfile):
